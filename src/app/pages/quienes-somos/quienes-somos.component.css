@@ -1,0 +1,33 @@
+.about-essenza {
+  font-family: 'Georgia', serif;
+  background: linear-gradient(to right, #fffdf7, #fcf8f2);
+  position: relative;
+}
+
+.text-essenza {
+  color: #d4af37;
+  font-weight: 600;
+}
+
+.divider {
+  height: 3px;
+  width: 80px;
+  background-color: #d4af37;
+  border-radius: 999px;
+}
+
+.valor-card {
+  background: #ffffff;
+  border: 1px solid #f0f0f0;
+  transition: all 0.3s ease-in-out;
+}
+
+.valor-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+.bg-essenza-soft {
+  background: linear-gradient(135deg, #fffce5, #fef7dc);
+  border-left: 4px solid #d4af37;
+}

@@ -1,0 +1,32 @@
+<div class="perfume-card position-relative">
+
+  <!-- Badge de descuento -->
+  <div class="discount-ribbon" *ngIf="perfume.descuento > 0" [attr.data-label]="'-' + perfume.descuento + '%'"></div>
+
+  <!-- Icono de favorito -->
+  <button class="favorite-btn" title="Agregar a favoritos">
+    <i class="bi bi-heart"></i>
+  </button>
+
+  <!-- Imagen -->
+  <a [routerLink]="['/perfume', perfume.id]" class="perfume-image-wrapper">
+    <img [src]="perfume.imagenUrl" [alt]="perfume.nombre" class="perfume-image" />
+  </a>
+
+  <!-- Contenido -->
+  <div class="perfume-content">
+    <h5 class="perfume-title">{{ perfume.nombre }}</h5>
+    
+    <div class="perfume-pricing">
+      <ng-container *ngIf="perfume.descuento > 0; else soloActual">
+        <span class="precio-original">S/. {{ perfume.precioOriginal }}</span>
+      </ng-container>
+      <ng-template #soloActual></ng-template>
+      <span class="precio-actual">S/. {{ perfume.precioActual }}</span>
+    </div>
+
+    <button (click)="agregarAlCarrito()" class="btn-perfume">
+      <i class="bi bi-cart me-2"></i> Añadir al carrito
+    </button>
+  </div>
+</div>

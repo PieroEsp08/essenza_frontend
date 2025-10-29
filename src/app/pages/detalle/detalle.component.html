@@ -1,0 +1,61 @@
+<div class="container py-5 perfume-detalle" *ngIf="perfume">
+  <div class="row justify-content-center">
+    <div class="col-lg-10">
+
+      <div class="card perfume-card border-0 shadow-lg rounded-4 p-4">
+        <div class="row align-items-center gy-4">
+
+          <!-- Imagen -->
+          <div class="col-md-6 text-center">
+            <div class="perfume-img-wrapper p-3 rounded-4">
+              <img [src]="perfume.imagenUrl"
+                   [alt]="perfume.nombre"
+                   class="img-fluid rounded-4 shadow"
+                   style="max-height: 460px; object-fit: cover;" />
+            </div>
+          </div>
+
+          <!-- Detalles -->
+          <div class="col-md-6">
+            <h2 class="fw-bold mb-3 text-dark display-6">{{ perfume.nombre }}</h2>
+
+            <!-- Precios -->
+            <div class="mb-4 d-flex align-items-center gap-3 flex-wrap">
+              <span *ngIf="perfume.descuento > 0"
+                    class="precio-mono text-danger text-decoration-line-through fs-5 fw-medium">
+                S/. {{ perfume.precioOriginal }}
+              </span>
+              <span class="precio-mono fw-bold fs-1" style="color: #28a745;">
+                S/. {{ perfume.precioActual.toFixed(2) }}
+              </span>
+              <span *ngIf="perfume.descuento > 0"
+                    class=" precio-mono badge badge-descuento">
+                -{{ perfume.descuento }}%
+              </span>
+            </div>
+
+            <!-- Descripción -->
+            <p class="text-muted mb-4 lh-lg fs-5">
+              {{ perfume.descripcion }}
+            </p>
+
+            <!-- Info -->
+            <ul class="list-unstyled text-muted fs-6 mb-4">
+              <li><i class="bi bi-person-fill me-2 text-secondary animated-icon"></i><strong>Género:</strong> {{ perfume.genero?.nombre }}</li>
+              <li><i class="bi bi-collection-fill me-2 text-secondary animated-icon"></i><strong>Categoría:</strong> {{ perfume.categoria?.nombre }}</li>
+              <li><i class="bi bi-gem me-2 text-secondary animated-icon"></i><strong>Marca:</strong> {{ perfume.marca?.nombre }}</li>
+          </ul>
+
+            <!-- Botón (no modificado) -->
+            <button (click)="agregarAlCarrito()"
+                    class="btn btn-perfume w-100 d-flex align-items-center justify-content-center shadow-sm">
+              <i class="bi bi-cart me-2 fs-5"></i> Añadir al carrito
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,52 @@
+.container-genero-cards {
+  max-width: 1200px; 
+  margin: 0 auto;   
+  height: 600px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 0 1rem;
+}
+
+
+.genero-card {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #fff;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.genero-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+}
+
+.genero-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.genero-card h3 {
+  margin: 0;
+  padding: 12px;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+
+.borde-hombre {
+  border: 3px solid #87ceeb; 
+}
+
+.borde-mujer {
+  border: 3px solid #f4a0c9; 
+}
+
+.borde-unisex {
+  border: 3px solid #b0b0b0; 
+}

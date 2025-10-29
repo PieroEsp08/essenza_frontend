@@ -1,0 +1,36 @@
+.categoria-banner {
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+.categoria-banner:hover {
+  transform: scale(1.03);
+}
+
+
+.categoria-overlay {
+  background-color: rgba(0, 0, 0, 0.25);
+  color: #fff;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 1.2rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: background-color 0.4s ease;
+}
+
+.categoria-banner:hover .categoria-overlay {
+  background-color: rgba(0, 0, 0, 0);
+}

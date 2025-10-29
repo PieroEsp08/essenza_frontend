@@ -1,0 +1,35 @@
+.logo-redondo {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%; 
+  transition: transform 0.3s ease;
+}
+
+/* Cambiar color de las flechas */
+swiper-container::part(button-prev),
+swiper-container::part(button-next) {
+  color: #d4af37;
+  font-size: 24px;
+  transition: color 0.3s ease;
+}
+
+swiper-container::part(button-prev):hover,
+swiper-container::part(button-next):hover {
+  color: #b8860b;
+}
+
+/* Cambia el color de todos los bullets inactivos */
+swiper-container::part(bullet) {
+  background-color: #ccc;
+  opacity: 1;
+  transition: background-color 0.3s ease;
+}
+
+swiper-container::part(bullet-active) {
+  background-color: #D4AF37;
+}
+swiper-slide {
+  padding-bottom: 40px; /* espacio para separar la paginación de las imágenes */
+}
+

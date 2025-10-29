@@ -1,0 +1,47 @@
+/* Contenedor principal del detalle */
+.perfume-detalle {
+  font-family: 'Georgia', serif;
+  color: #222;
+}
+
+/* Card personalizada */
+.perfume-card {
+  background: linear-gradient(to right, #fff8f0, #f0e5d8);
+  border: none;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.11);
+  border-radius: 1rem;
+}
+
+/* Badge descuento */
+.badge-descuento {
+  background-color: #fff3cd;
+  color: #856404;
+  font-weight: 600;
+  padding: 0.4rem 0.75rem;
+  border-radius: 30px;
+  font-size: 0.95rem;
+  border: 1px solid #ffecb5;
+}
+
+/* Precio con fuente monoespaciada */
+.precio-mono {
+  font-family: 'Roboto Mono';
+}
+
+/* Botón de carrito */
+.btn-perfume {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  color: #d4af37;
+  border: 1.5px solid #d4af37;
+  border-radius: 20px;
+  padding: 0.5rem 1.2rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-perfume:hover {
+  background-color: #d4af37;
+  color: #fff;
+}
+

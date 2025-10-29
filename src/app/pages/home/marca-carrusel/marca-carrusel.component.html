@@ -1,0 +1,18 @@
+<h2 class="text-center my-4" style="font-family:'Merriweather', serif; font-weight: 600;">NUESTRAS MARCAS</h2>
+
+
+<swiper-container
+  slides-per-view="5"
+  navigation="true"
+  pagination="true"
+  space-between="10"
+  autoplay-delay="2500"
+  autoplay-disable-on-interaction="false"
+  class="mySwiper"
+>
+  <swiper-slide *ngFor="let marca of marcas">
+    <div class="text-center">
+      <img [src]="marca.imagenUrl" [alt]="marca.nombre" class="logo-redondo" />
+    </div>
+  </swiper-slide>
+</swiper-container>

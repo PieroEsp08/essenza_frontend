@@ -1,0 +1,29 @@
+.carrito-container {
+  font-family: 'Georgia', serif;
+  border-radius: 1rem;
+}
+
+.carrito-item {
+  background: #ffffff;
+  transition: transform 0.2s ease;
+}
+
+.fuente-georgia {
+  font-family: 'Georgia', serif;
+}
+
+.fuente-numeros {
+  font-family: 'Roboto Mono';
+}
+
+.btn-confirmar-compra {
+  background-color: #28a745;
+  border: none;
+  color: white;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.btn-confirmar-compra:hover {
+  background-color: #28a745;
+}

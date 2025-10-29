@@ -1,0 +1,14 @@
+.filtro-card {
+  background-color: #f8f9fa;
+  border-left: 4px solid #343a40;
+}
+
+.form-check-label {
+  font-size: 15px;
+  color: #333;
+}
+
+h5 {
+  font-weight: 600;
+  color: #212529;
+}

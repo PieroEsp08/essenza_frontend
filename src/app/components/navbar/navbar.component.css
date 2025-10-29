@@ -1,0 +1,226 @@
+/* Fondo negro del navbar */
+nav.navbar {
+  background-color: #000000;
+  position: sticky;
+  top: 0;
+  z-index: 1050;
+  font-family: Georgia, serif;
+}
+
+.navbar-logo-circle {
+  width: 60px;
+  height: 60px;
+  background-color: #000;
+  border: 3px solid #D4AF37;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* Sombra dorada notable */
+  box-shadow:
+    0 0 10px rgba(245, 197, 24, 0.5),
+    0 0 20px rgba(245, 197, 24, 0.35);
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar-logo-circle img {
+  max-width: 75%;
+  max-height: 75%;
+}
+
+
+/* Texto del logo */
+.navbar-brand span {
+  color: #FFFFFF;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+/* Enlaces del navbar (Inicio, Perfumes, etc.) */
+.navbar .nav-link {
+  color: #FFFFFF;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+/* Hover o enlace activo en dorado */
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: #D4AF37 !important;
+}
+
+/* Icono del botón (menú hamburguesa) */
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler-icon {
+  filter: invert(100%); /* para que se vea blanco en fondo negro */
+}
+
+/* Estilo base del menú desplegable */
+.dropdown-menu {
+  background-color: #111111;
+  border: 1px solid #FFFFFF; 
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  padding: 0.5rem 0;
+}
+
+/* Estilo base de los ítems: blanco */
+.dropdown-item {
+  color: #ffffff;
+  background-color: #111111;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  padding: 0.5rem 1rem;
+}
+
+/* Hover: dorado */
+.dropdown-item:hover {
+  color: #D4AF37;
+  background-color: #111111;
+}
+
+/* Fix para que al hacer clic no se quede dorado */
+.dropdown-item:focus,
+.dropdown-item:active {
+  color: #ffffff !important;
+  background-color: #111111 !important;
+  outline: none;
+  box-shadow: none;
+}
+
+/* Dropdown con animación de despliegue */
+.nav-item.dropdown .dropdown-menu {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  display: block; /* Importante para que no se colapse */
+  margin-top: 0;
+  pointer-events: none;
+  position: absolute; /* Necesario si no lo está */
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+
+/* Botón del carrito */
+.navbar .btn.nav-link {
+  color: #FFFFFF;
+  transition: color 0.3s ease;
+}
+
+.navbar .btn.nav-link:hover {
+  color: #D4AF37;
+}
+
+/* Badge del carrito */
+.badge {
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+
+.buscador-container {
+  position: relative;
+  width: 100%;
+  max-width: 780px;
+  margin-left: 380px;
+}
+
+.buscador-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border: 2px solid #ccc;
+  padding: 8px 16px;
+  transition: border-color 0.3s;
+}
+
+.buscador-input-wrapper:focus-within {
+  border-color: #D4AF37;
+}
+
+.icono-lupa {
+  width: 20px;
+  height: 20px;
+  color: black;
+  margin-right: 8px;
+  flex-shrink: 0;
+}
+
+.input-busqueda {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 15px;
+  background-color: transparent;
+  color: #333;
+}
+
+.resultados-busqueda {
+  position: absolute;
+  top: 100%; /* Aparece justo debajo del input */
+  left: 0;
+  width: 100%;
+  background: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+
+.resultados-busqueda.mostrar {
+  max-height: 300px;
+  opacity: 1;
+}
+
+.resultado-item {
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.2s;
+}
+
+.resultado-item:hover {
+  background-color: #f5f5f5;
+}
+
+.perfume-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  width: 100%;
+}
+
+.perfume-image {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 12px;
+}
+
+.nombre-resultado {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+
+
+
+
+

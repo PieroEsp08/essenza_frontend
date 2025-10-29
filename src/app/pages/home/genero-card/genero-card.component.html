@@ -1,0 +1,14 @@
+<h2 class="text-center my-4" style="font-family:'Merriweather', serif; font-weight: 600;" >GÉNEROS</h2>
+
+<div class="container-genero-cards">
+ <div *ngFor="let genero of generos"
+     class="genero-card"
+     [ngClass]="{
+       'borde-hombre': genero.nombre === 'Hombre',
+       'borde-mujer': genero.nombre === 'Mujer',
+       'borde-unisex': genero.nombre === 'Unisex'
+     }">
+  <img [src]="genero.imagenUrl" alt="{{ genero.nombre }}" />
+</div>
+
+</div>
