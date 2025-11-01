@@ -1,11 +1,10 @@
 <nav class="navbar navbar-expand-lg px-4">
   <a class="navbar-brand d-flex align-items-center" href="#">
-  <div class="navbar-logo-circle me-2">
-    <img src="assets/logo.png" alt="Essenza Logo">
-  </div>
-  <span class="fw-bold text-white">Essenza</span>
-</a>
-
+    <div class="navbar-logo-circle me-2">
+      <img src="assets/logo.png" alt="Essenza Logo">
+    </div>
+    <span class="fw-bold text-white">Essenza</span>
+  </a>
 
   <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
       data-bs-target="#navbarEssenza" aria-controls="navbarEssenza"
@@ -13,23 +12,14 @@
       <span class="navbar-toggler-icon"></span>
   </button>
 
-
-
   <div class="collapse navbar-collapse" id="navbarEssenza">
 
-
-    <div class="buscador-container flex-grow-1 my-2 my-lg-0 mx-lg-4">
+    <!-- 🔹 Buscador centrado -->
+    <div class="buscador-container mx-auto flex-grow-1 px-3">
       <div class="buscador-input-wrapper w-100">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="icono-lupa"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        >
+        <svg xmlns="http://www.w3.org/2000/svg" class="icono-lupa"
+             viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <circle cx="11" cy="11" r="8"></circle>
           <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
         </svg>
@@ -57,51 +47,38 @@
       </div>
     </div>
 
-
-
-
-
-
+    <!-- 🔹 Enlaces a la derecha -->
     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
       <li class="nav-item">
         <a class="nav-link text-white" href="#">Inicio</a>
       </li>
-
       <li class="nav-item dropdown">
-  <a class="nav-link dropdown-toggle" href="#" id="catalogoDropdown" role="button"
-     data-bs-toggle="dropdown" aria-expanded="false">
-    Perfumes
-  </a>
-  <ul class="dropdown-menu" aria-labelledby="catalogoDropdown">
-    <li *ngFor="let gen of generos">
-      <a class="dropdown-item" [routerLink]="['/genero', gen.id]">{{ gen.nombre }}</a>
-    </li>
-  </ul>
-</li>
-
+        <a class="nav-link dropdown-toggle" href="#" id="catalogoDropdown"
+           data-bs-toggle="dropdown" aria-expanded="false">Perfumes</a>
+        <ul class="dropdown-menu" aria-labelledby="catalogoDropdown">
+          <li *ngFor="let gen of generos">
+            <a class="dropdown-item" [routerLink]="['/genero', gen.id]">
+              {{ gen.nombre }}
+            </a>
+          </li>
+        </ul>
+      </li>
       <li class="nav-item">
         <a class="nav-link text-white" routerLink="/quienes-somos">Quiénes Somos</a>
       </li>
-
       <li class="nav-item d-flex align-items-center position-relative">
-  <!-- Icono del carrito -->
-  <button class="btn nav-link text-white border-0 bg-transparent" (click)="abrirCarrito()">
-    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-         class="bi bi-cart me-1" viewBox="0 0 16 16">
-      <path d="M0 1.5A.5.5 0 0 1 .5 1h1.11l.401 1H15a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13.5 9H4.118l-.405-1.622L1.61 2H.5a.5.5 0 0 1-.5-.5zM5.118 8h8.382l1.2-4.8H3.523l1.595 4.8zM5 12a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm6 1a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
-    </svg>
-
-     <!-- Badge con contador -->
-    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
-          *ngIf="cantidadItems > 0">
-      {{ cantidadItems }}
-    </span>
-
-  </button>
-
-
-</li>
-
+        <button class="btn nav-link text-white border-0 bg-transparent" (click)="abrirCarrito()">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+               fill="currentColor" class="bi bi-cart me-1" viewBox="0 0 16 16">
+            <path d="M0 1.5A.5.5 0 0 1 .5 1h1.11l.401 1H15a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13.5 9H4.118l-.405-1.622L1.61 2H.5a.5.5 0 0 1-.5-.5zM5.118 8h8.382l1.2-4.8H3.523l1.595 4.8zM5 12a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm6 1a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+          </svg>
+          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                *ngIf="cantidadItems > 0">
+            {{ cantidadItems }}
+          </span>
+        </button>
+      </li>
     </ul>
+
   </div>
 </nav>
