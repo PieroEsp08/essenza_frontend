@@ -15,7 +15,7 @@
   <div class="collapse navbar-collapse" id="navbarEssenza">
 
     <!-- 🔹 Buscador centrado -->
-    <div class="buscador-container mx-auto flex-grow-1 px-3">
+    <div class="buscador-container mx-auto flex-grow-1 px-3" #busquedaRef>
       <div class="buscador-input-wrapper w-100">
         <svg xmlns="http://www.w3.org/2000/svg" class="icono-lupa"
              viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -33,7 +33,7 @@
         />
       </div>
 
-      <div class="resultados-busqueda" [class.mostrar]="resultados.length > 0">
+      <div class="resultados-busqueda" [class.mostrar]="mostrarResultados && resultados.length > 0">
         <div *ngFor="let perfume of resultados" class="resultado-item">
           <a [routerLink]="['/perfume', perfume.id]" class="perfume-link">
             <img

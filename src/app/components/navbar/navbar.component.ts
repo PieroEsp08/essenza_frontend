@@ -61,12 +61,16 @@ export class NavbarComponent {
     buscarPerfumes() {
   if (this.terminoBusqueda.trim().length === 0) {
     this.resultados = [];
+    this.mostrarResultados = false;
     return;
   }
 
   this.perfumeService.buscarPorNombre(this.terminoBusqueda)
     .subscribe({
-      next: (resp) => this.resultados = resp,
+      next: (resp) => {
+        this.resultados = resp;
+        this.mostrarResultados = resp.length > 0;
+      },
       error: (err) => console.error('Error en búsqueda:', err)
     });
 }
