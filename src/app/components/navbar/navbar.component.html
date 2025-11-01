@@ -15,15 +15,11 @@
 
 
 
-
-
-
-
   <div class="collapse navbar-collapse" id="navbarEssenza">
 
 
-    <div class="buscador-container">
-      <div class="buscador-input-wrapper">
+    <div class="buscador-container flex-grow-1 my-2 my-lg-0 mx-lg-4">
+      <div class="buscador-input-wrapper w-100">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           class="icono-lupa"
@@ -40,7 +36,7 @@
 
         <input
           type="text"
-          placeholder="¿Qué estas buscando?"
+          placeholder="¿Qué estás buscando?"
           [(ngModel)]="terminoBusqueda"
           (input)="buscarPerfumes()"
           class="input-busqueda"
