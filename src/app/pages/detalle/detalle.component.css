@@ -2,6 +2,10 @@
 .perfume-detalle {
   font-family: 'Georgia', serif;
   color: #222;
+  min-height: calc(100vh - 200px); /* ocupa casi toda la pantalla */
+  display: flex;
+  align-items: center; /* centra verticalmente */
+  justify-content: center; /* centra horizontalmente si hay poco contenido */
 }
 
 /* Card personalizada */
